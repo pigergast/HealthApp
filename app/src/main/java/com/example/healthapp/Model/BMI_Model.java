@@ -21,7 +21,7 @@ public class BMI_Model {
     public double getBMI(){
         if(isMetric)
         {
-            return (weight / Math.pow(height, 2));
+            return (weight / Math.pow(height, 2)) * 10000;
         }
         else {
             return (weight/ Math.pow(height, 2)) * 703;
