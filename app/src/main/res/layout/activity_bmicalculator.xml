@@ -34,7 +34,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/BMI"
                     android:layout_width="200dp"
                     android:layout_height="50dp"
                     android:foregroundGravity="center"
@@ -57,7 +57,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/Status"
                     android:layout_width="200dp"
                     android:layout_height="50dp"
                     android:foregroundGravity="center"
@@ -73,15 +73,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/heightText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Your Height(Cm/In):"
+                android:text="Your Height(Cm):"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <EditText
-                android:id="@+id/editTextNumber8"
+                android:id="@+id/height"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -96,38 +96,40 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/weightText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Your Weight(Kg/Lb):"
+                android:text="Your Weight(Kg):"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <EditText
-                android:id="@+id/editTextNumber9"
+                android:id="@+id/weight"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:ems="10"
                 android:inputType="number" />
+
         </LinearLayout>
 
         <Switch
-            android:id="@+id/switch3"
+            android:id="@+id/switchUnit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:foregroundGravity="center_vertical"
-            android:gravity="center"
-            android:minHeight="48dp"
+            android:padding="10dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
             android:showText="true"
-            android:textOff="Imperial"
-            android:textOn="Metric" />
+            android:text="Unit:"
+            android:textOff="Metric"
+            android:textOn="Imperial" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_calculate_24"
             android:text="Calculate" />
 
     </LinearLayout>
