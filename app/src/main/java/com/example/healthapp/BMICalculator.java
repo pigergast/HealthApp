@@ -9,6 +9,10 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.example.healthapp.Model.BMI_Model;
+
+import java.text.DecimalFormat;
+
 public class BMICalculator extends AppCompatActivity {
 
     @Override
@@ -42,6 +46,12 @@ public class BMICalculator extends AppCompatActivity {
             public void onClick(View view) {
                 String hString = height.getText().toString();
                 String wString = weight.getText().toString();
+                if(!hString.isEmpty() && !wString.isEmpty()){
+                    DecimalFormat df = new DecimalFormat("0.00");
+                    BMI_Model bmi = new BMI_Model(Double.parseDouble(hString), Double.parseDouble(wString), !unit.isChecked());
+                    BMI.setText(df.format(bmi.getBMI()));
+                    status.setText(bmi.getStatus().name());
+                }
             }
         });
     }

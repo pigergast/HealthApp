@@ -5,7 +5,7 @@ public class BMI_Model {
     public double weight;
     public boolean isMetric;
 
-    enum Status {
+    public  enum Status {
         UNDERWEIGHT,
         HEALTHY,
         OVERWEIGHT,
