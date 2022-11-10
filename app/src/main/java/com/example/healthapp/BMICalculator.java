@@ -28,12 +28,12 @@ public class BMICalculator extends AppCompatActivity {
             public void onClick(View view) {
                 Switch btn = (Switch) view;
                 if(btn.isChecked()){
-                    heightText.setText("Your Height(In):");
-                    weightText.setText("Your Weight(Lb):");
+                    heightText.setText("Height(In):");
+                    weightText.setText("Weight(Lb):");
                 }
                 else {
-                    heightText.setText("Your Height(Cm):");
-                    weightText.setText("Your Weight(Kg):");
+                    heightText.setText("Height(Cm):");
+                    weightText.setText("Weight(Kg):");
                 }
             }
         });
