@@ -18,10 +18,14 @@ public class ExcerciseModel {
     public static List<ExcerciseModel> getExcerciseList()
     {
         List<ExcerciseModel> list = new ArrayList<>();
-        SetModel set = new SetModel("Bicep Curl", 12, 4);
+
         ExcerciseModel excercise = new ExcerciseModel("Arms", 1);
-        excercise.excerciseList.add(set);
+        excercise.excerciseList.add(new SetModel("Bicep Curl", 12, 4));
+        excercise.excerciseList.add(new SetModel("Tricep Pushdown", 12, 4));
         list.add(excercise);
+        ExcerciseModel excercise2 = new ExcerciseModel("Legs", 1);
+        excercise2.excerciseList.add(new SetModel("Squat", 5, 4));
+        list.add(excercise2);
         return list;
 
     }

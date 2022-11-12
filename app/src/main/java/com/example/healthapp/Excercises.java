@@ -1,6 +1,8 @@
 package com.example.healthapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +10,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.healthapp.Model.ExcerciseModel;
+
+import java.util.List;
+
 public class Excercises extends AppCompatActivity {
+
+    List<ExcerciseModel> excercises;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,20 +24,16 @@ public class Excercises extends AppCompatActivity {
 
         setContentView(R.layout.activity_excercises);
 
-        Button btn = findViewById(R.id.button3);
-        LinearLayout layout = (LinearLayout) findViewById(R.id.layout);
+        RecyclerView exList = (RecyclerView) findViewById(R.id.excerciseList);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(layout.getVisibility() == View.VISIBLE) {
-                    layout.setVisibility(View.GONE);
-                }
-                else {
-                    layout.setVisibility(View.VISIBLE);
-                }
-            }
-        });
+        excercises = ExcerciseModel.getExcerciseList();
+        ExcerciseAdapter adapter = new ExcerciseAdapter(excercises);
+
+        exList.setAdapter(adapter);
+
+        exList.setLayoutManager(new LinearLayoutManager(this));
+
+
 
     }
 }

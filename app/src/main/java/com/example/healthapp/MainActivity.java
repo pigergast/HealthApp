@@ -14,7 +14,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button toBMI = (Button) findViewById(R.id.bmi_button);
+        Button toEx = (Button) findViewById(R.id.excercises);
         toBMI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BMICalculator.class);
+                startActivity(intent);
+            }
+        });
+        toEx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Excercises.class);
