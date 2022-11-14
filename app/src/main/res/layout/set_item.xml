@@ -6,30 +6,32 @@
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
     android:orientation="horizontal"
+    android:padding="10dp"
     android:paddingTop="10dp"
     android:paddingBottom="10dp">
 
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/SetName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Dumbbell Curls" />
+        android:layout_weight="5"
+        android:text="Dumbbell Curls"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/RepNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:drawableLeft="@drawable/ic_baseline_repeat_24"
-        android:text="12 Reps" />
+        android:text="12 Reps"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/SetNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:drawableLeft="@drawable/ic_baseline_loop_24"
-        android:text="4 Sets" />
+        android:text="4 Sets"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 </LinearLayout>

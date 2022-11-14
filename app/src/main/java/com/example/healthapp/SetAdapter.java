@@ -9,48 +9,51 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.healthapp.Model.ExcerciseModel;
+import com.example.healthapp.Model.SetModel;
 
 import java.util.List;
 
 public class SetAdapter extends RecyclerView.Adapter<SetAdapter.ViewHolder> {
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView ExName;
-        public Button expand;
 
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        public TextView SetName;
+        public TextView RepNum;
+        public TextView SetNum;
         public ViewHolder(View itemView) {
             super(itemView);
-            ExName = (TextView) itemView.findViewById(R.id.excerciseName);
-            expand = (Button) itemView.findViewById(R.id.expand);
+            SetName = (TextView) itemView.findViewById(R.id.SetName);
+            RepNum = (TextView) itemView.findViewById(R.id.RepNum);
+            SetNum = (TextView) itemView.findViewById(R.id.SetNum);
         }
 
     }
-    private List<ExcerciseModel> excercisesList;
+    private List<SetModel> setList;
 
-    public SetAdapter(List<ExcerciseModel> list){
-        excercisesList = list;
+    public SetAdapter(List<SetModel> list){
+        setList = list;
     }
     @Override
     public SetAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View contactView = inflater.inflate(R.layout.excercise_item, parent, false);
+        View contactView = inflater.inflate(R.layout.set_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(contactView);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position){
-        ExcerciseModel excercise = excercisesList.get(position);
-        TextView textView = viewHolder.ExName;
-        textView.setText(excercise.excerciseName);
-        Button button = viewHolder.expand;
-        button.setText("Expand");
-        button.setEnabled(true);
+        SetModel set = setList.get(position);
+        TextView name = viewHolder.SetName;
+        name.setText(set.name);
+        TextView rep = viewHolder.RepNum;
+        rep.setText(set.repNum.toString() + " Reps");
+        TextView sets = viewHolder.SetNum;
+        sets.setText(set.setNum.toString() +" Sets");
     }
 
     @Override
     public int getItemCount(){
-        return excercisesList.size();
+        return setList.size();
     }
 }

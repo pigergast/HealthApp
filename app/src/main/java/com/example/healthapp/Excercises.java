@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.healthapp.Model.ExcerciseModel;
 
@@ -32,6 +30,15 @@ public class Excercises extends AppCompatActivity {
         exList.setAdapter(adapter);
 
         exList.setLayoutManager(new LinearLayoutManager(this));
+
+        Button back = (Button) findViewById(R.id.backButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
 
 

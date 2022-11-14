@@ -2,34 +2,58 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
     android:orientation="vertical"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp">
+    android:padding="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/excerciseName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Arms"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:text="1H30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/expand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:drawableLeft="@drawable/ic_baseline_arrow_downward_24"
+            android:text="Open"
+            android:theme="@style/Theme.HealthApp" />
 
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/setList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
 
 </LinearLayout>
