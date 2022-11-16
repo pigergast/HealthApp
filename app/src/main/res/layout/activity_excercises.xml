@@ -16,6 +16,7 @@
               android:id="@+id/backButton"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:layout_margin="10dp"
               android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
               android:text="Back" />
 
@@ -24,7 +25,7 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:fontFamily="sans-serif-black"
-              android:text="🏋️‍♂️️Excercises:"
+              android:text="📖️️Excercises:"
               android:textAppearance="@style/TextAppearance.AppCompat.Display3"
               android:textColor="@color/whiteblue" />
 

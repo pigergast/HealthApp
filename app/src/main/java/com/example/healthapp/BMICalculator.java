@@ -54,5 +54,14 @@ public class BMICalculator extends AppCompatActivity {
                 }
             }
         });
+
+        Button back = (Button) findViewById(R.id.backBtn);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
