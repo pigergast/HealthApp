@@ -23,20 +23,21 @@
             android:id="@+id/excerciseName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
+            android:layout_weight="3"
+            android:singleLine="true"
             android:text="Arms"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="34sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/duration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:drawableLeft="@drawable/ic_baseline_access_time_24"
-            android:text="1H30"
+            android:padding="5dp"
+            android:text="1H"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="34sp" />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/expand"

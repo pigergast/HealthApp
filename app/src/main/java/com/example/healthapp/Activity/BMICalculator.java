@@ -1,4 +1,4 @@
-package com.example.healthapp;
+package com.example.healthapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.healthapp.Model.BMI_Model;
+import com.example.healthapp.R;
 
 import java.text.DecimalFormat;
 
