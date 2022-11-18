@@ -2,6 +2,7 @@ package com.example.healthapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +63,15 @@ public class BMICalculator extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        Button toMenu = (Button) findViewById(R.id.toExcercise);
+
+        toMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BMICalculator.this, Excercises.class);
+                startActivity(intent);
             }
         });
     }
