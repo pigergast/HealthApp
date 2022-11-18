@@ -30,21 +30,11 @@
               android:textAppearance="@style/TextAppearance.AppCompat.Display3"
               android:textColor="@color/whiteblue" />
 
-          <ScrollView
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/excerciseList"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content" />
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:orientation="vertical">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/excerciseList"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-               </LinearLayout>
-          </ScrollView>
      </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
